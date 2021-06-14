@@ -7,4 +7,5 @@ export const forestMock: Forest = {
   type: 'conservation',
   thumbnail: 'https://img.com/1',
   country: 'Brazil',
+  cover: '',
 }

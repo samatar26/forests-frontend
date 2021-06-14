@@ -5,10 +5,11 @@ export type Forest = {
   thumbnail: string
 
   country: string
-  longDescription?: string
+  long_description?: string
   area?: number
   latitude?: number
   longitude?: number
-  carbonStored?: number
-  changeInCarbonStored?: number
+  carbon_stored?: number
+  change_in_carbon_stored?: number
+  cover: string
 }

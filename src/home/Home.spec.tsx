@@ -48,6 +48,6 @@ describe('Home', () => {
 
     await userEvent.click(amazonThumbnail)
 
-    expect(screen.getByText('Brazil')).toBeInTheDocument()
+    expect(screen.getByText('Country: Brazil')).toBeInTheDocument()
   })
 })
