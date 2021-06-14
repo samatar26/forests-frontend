@@ -89,10 +89,10 @@ workflows:
           filters:
             branches:
               ignore: master
-      - deploy:
-          context: INFRASTRUCTURE
-          requires:
-            - build
-          filters:
-            branches:
-              only: main
+      # - deploy:
+      #     context: INFRASTRUCTURE
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: main
