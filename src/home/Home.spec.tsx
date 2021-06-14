@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 
 import BaseApp from '../BaseApp'
 
@@ -7,7 +7,7 @@ describe('Home', () => {
     render(<BaseApp />)
   })
 
-  it('displays hello world', () => {
-    expect(screen.getByText('Hello world!')).toBeInTheDocument()
+  it('displays Forests for the title of the page', async () => {
+    await waitFor(() => expect(document.title).toEqual('Forests'))
   })
 })
