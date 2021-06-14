@@ -1,4 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import BaseApp from '../BaseApp'
 import { server } from '../mocks/server'
@@ -38,5 +39,15 @@ describe('Home', () => {
     )) as HTMLImageElement
     expect(amazonThumbnail).toBeInTheDocument()
     expect(amazonThumbnail.src).toBe('https://img.com/1')
+  })
+
+  it('takes the user to the detail page when they click on the forest thumbnail', async () => {
+    const amazonThumbnail = (await screen.findByTestId(
+      'Amazon-thumbnail'
+    )) as HTMLImageElement
+
+    await userEvent.click(amazonThumbnail)
+
+    expect(screen.getByText('Brazil')).toBeInTheDocument()
   })
 })

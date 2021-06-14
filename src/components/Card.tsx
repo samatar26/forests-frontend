@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { Forest } from '../types'
 import {
   CardContainer,
@@ -13,10 +15,12 @@ type CardProps = {
 export const Card: React.FC<CardProps> = ({ forest }) => {
   return (
     <CardContainer>
-      <CardThumbnail
-        data-testid={`${forest.name}-thumbnail`}
-        src={forest.thumbnail}
-      />
+      <Link to={`/detail?forest=${forest.name}`}>
+        <CardThumbnail
+          data-testid={`${forest.name}-thumbnail`}
+          src={forest.thumbnail}
+        />
+      </Link>
       <CardTitle>{forest.name}</CardTitle>
       <CardDescription>{forest.description}</CardDescription>
       <span>Type: {forest.type}</span>

@@ -7,6 +7,8 @@ export const CardContainer = styled.article`
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 300px;
+  min-width: 300px;
   max-width: 300px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   padding: ${space[5]};
@@ -29,4 +31,6 @@ export const CardDescription = styled.p`
   font-size: 10px;
 `
 
-export const CardThumbnail = styled.img``
+export const CardThumbnail = styled.img`
+  cursor: pointer;
+`

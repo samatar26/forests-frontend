@@ -6,4 +6,5 @@ export const forestMock: Forest = {
     'A moist broadleaf tropical rainforest in the Amazon biome that covers most of the Amazon basin of South America.',
   type: 'conservation',
   thumbnail: 'https://img.com/1',
+  country: 'Brazil',
 }
