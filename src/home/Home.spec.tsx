@@ -29,7 +29,7 @@ describe('Home', () => {
         'A moist broadleaf tropical rainforest in the Amazon biome that covers most of the Amazon basin of South America.'
       )
     ).toBeInTheDocument()
-    expect(await screen.findByText('conservation')).toBeInTheDocument()
+    expect(await screen.findByText('Type: conservation')).toBeInTheDocument()
   })
 
   it('displays an image of the forest', async () => {

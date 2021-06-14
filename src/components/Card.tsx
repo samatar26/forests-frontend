@@ -19,7 +19,7 @@ export const Card: React.FC<CardProps> = ({ forest }) => {
       />
       <CardTitle>{forest.name}</CardTitle>
       <CardDescription>{forest.description}</CardDescription>
-      <span>{forest.type}</span>
+      <span>Type: {forest.type}</span>
     </CardContainer>
   )
 }

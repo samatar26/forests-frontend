@@ -72,8 +72,8 @@ jobs:
       - run:
           name: Copy dist folder to google storage bucket
           command: |
-            gsutil cp *.js gs://pachama.samatar.dev
-            gsutil cp index.html gs://pachama.samatar.dev
+            gsutil cp *.js gs://marhaban.samatar.dev
+            gsutil cp index.html gs://marhaban.samatar.dev
           working_directory: dist
 
 workflows:
@@ -89,10 +89,10 @@ workflows:
           filters:
             branches:
               ignore: master
-      # - deploy:
-      #     context: INFRASTRUCTURE
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: main
+      - deploy:
+          context: INFRASTRUCTURE
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
