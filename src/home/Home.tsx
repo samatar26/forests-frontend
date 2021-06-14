@@ -6,9 +6,14 @@ import { getForests } from '../requests/forests'
 const Home = () => {
   const { isSuccess, data } = useQuery('forests', getForests)
 
+  if (!isSuccess || !data) return null
+
   return (
-    isSuccess &&
-    data?.map((forest) => <Card key={forest.name} forest={forest} />)
+    <main>
+      {data.map((forest) => (
+        <Card key={forest.name} forest={forest} />
+      ))}
+    </main>
   )
 }
 

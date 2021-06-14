@@ -1,4 +1,10 @@
 import { Forest } from '../types'
+import {
+  CardContainer,
+  CardDescription,
+  CardThumbnail,
+  CardTitle,
+} from './Card.styles'
 
 type CardProps = {
   forest: Forest
@@ -6,9 +12,15 @@ type CardProps = {
 
 export const Card: React.FC<CardProps> = ({ forest }) => {
   return (
-    <article>
-      <h1>{forest.name}</h1>
-    </article>
+    <CardContainer>
+      <CardThumbnail
+        data-testid={`${forest.name}-thumbnail`}
+        src={forest.thumbnail}
+      />
+      <CardTitle>{forest.name}</CardTitle>
+      <CardDescription>{forest.description}</CardDescription>
+      <span>{forest.type}</span>
+    </CardContainer>
   )
 }
 

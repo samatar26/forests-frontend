@@ -24,5 +24,19 @@ describe('Home', () => {
 
   it('displays a forest name, type and description', async () => {
     expect(await screen.findByText('Amazon')).toBeInTheDocument()
+    expect(
+      screen.getByText(
+        'A moist broadleaf tropical rainforest in the Amazon biome that covers most of the Amazon basin of South America.'
+      )
+    ).toBeInTheDocument()
+    expect(await screen.findByText('conservation')).toBeInTheDocument()
+  })
+
+  it('displays an image of the forest', async () => {
+    const amazonThumbnail = (await screen.findByTestId(
+      'Amazon-thumbnail'
+    )) as HTMLImageElement
+    expect(amazonThumbnail).toBeInTheDocument()
+    expect(amazonThumbnail.src).toBe('https://img.com/1')
   })
 })
