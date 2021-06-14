@@ -1,0 +1,28 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "testing-library",
+    "react",
+    "jest",
+    "jest-dom"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:testing-library/react",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest-dom/recommended"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
+  }
+}
