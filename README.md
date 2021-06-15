@@ -25,3 +25,4 @@ Current issues:
 - If you refresh on the details page, you get a 404 displayed. I think I know how to fix this, but out of time.
 - Unfortunately had no time for the bonus features as I spent some time on the infrastructure to get the project deployed.
 - Should really handle loading and error states. But there's only so much time in the day :sob:
+- Used a template I created myself, but do regret it a little as it would've been faster (and nicer) to use a component library. 
